@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Vocabs Daily</string>
+    <string name="daily_words">Words of the day</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="saved_words">Saved Words</string>
+    <string name="word">Day Word</string>
+    <string name="saved">Saved</string>
+    <string name="head_syn">Synonyms:</string>
+    <string name="head_ant">Antonyms:</string>
+    <string name="head_eg">Examples:</string>
+</resources>
