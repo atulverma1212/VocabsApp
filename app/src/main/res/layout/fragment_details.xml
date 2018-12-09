@@ -33,6 +33,20 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/head_mean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/head_mean"/>
+
+            <TextView
+                android:id="@+id/word_mean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/head_ant"/>
+
+            <TextView
                 android:id="@+id/head_synonym"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -5,31 +5,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.SearchView;
 
 import com.vspace.vocabs.vocabsdaily.adapters.MainAdapter;
 import com.vspace.vocabs.vocabsdaily.data.DataAsset;
 
-public class MainActivity extends AppCompatActivity implements MainAdapter.MainListItemClickListener{
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class MainActivity extends AppCompatActivity{
+    @BindView(R.id.search_bar)
+    EditText searchBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_main);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        mAdapter = new MainAdapter(DataAsset.getMainList(),this);
-        mRecyclerView.setAdapter(mAdapter);
+        ButterKnife.bind(this);
     }
 
-    @Override
-    public void onMainListClick(int clickedItem) {
+    @OnClick(R.id.daily_word_card)
+    public void onClickDailyWords(){
         Intent intent = new Intent(this, WordsActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.search_bar_cross)
+    public void onClickSearchCross(){
+        searchBar.setText("");
     }
 }

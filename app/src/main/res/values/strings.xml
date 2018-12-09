@@ -8,4 +8,7 @@
     <string name="head_syn">Synonyms:</string>
     <string name="head_ant">Antonyms:</string>
     <string name="head_eg">Examples:</string>
+    <string name="search_hint">Search a word</string>
+    <string name="app_label">Dictionary</string>
+    <string name="head_mean">Meaning:</string>
 </resources>

@@ -22,6 +22,7 @@ public class DetailsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_details, container, false);
+        TextView tv_mean = rootView.findViewById(R.id.word_mean);
         TextView tv_syn = rootView.findViewById(R.id.word_synonym);
         TextView tv_ant = rootView.findViewById(R.id.word_antonym);
         TextView tv_eg = rootView.findViewById(R.id.word_example);
